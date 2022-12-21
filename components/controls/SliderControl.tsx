@@ -1,16 +1,19 @@
 import { useContext } from 'react';
 import ControlWrapper from './ControlWrapper';
 import PlaygroundContext from '../PlaygroundContext';
+import PlaygroundState from '../PlaygroundState';
 
 type SliderControlProps = {
-  id: string;
+  id: keyof PlaygroundState;
   label: string;
   min: number;
   max: number;
   step?: number;
 };
 
-const SliderControl = ({ id, label, min, max, step }: SliderControlProps) => {
+const SliderControl = ({
+  id, label, min, max, step,
+}: SliderControlProps) => {
   const { id: playgroundId, state, setState } = useContext(PlaygroundContext);
 
   const inputName = `${playgroundId}-${id}`;
@@ -27,7 +30,7 @@ const SliderControl = ({ id, label, min, max, step }: SliderControlProps) => {
         step={step}
         value={state[id]}
         onChange={(e) => {
-          setState((s) => ({ ...s, [id]: e.target.value }));
+          setState((s: PlaygroundState) => ({ ...s, [id]: e.target.value }));
         }}
       />
     </ControlWrapper>

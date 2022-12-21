@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import playgroundContext from '../PlaygroundContext';
+import PlaygroundContext from '../PlaygroundContext';
+import PlaygroundState from '../PlaygroundState';
 
 type OverlayProps = {
   type: string;
@@ -12,20 +13,21 @@ const StyledOverlay = styled.div`
   height: 100%;
 `;
 
-const blur = (amount: number) => `
+const blur = (amount: number = 0) => `
   filter: blur(${amount}px);
 `;
 
-const cloudy = (amount: number) => `
+const cloudy = (amount: number = 0) => `
   filter: blur(${amount * 1.5}px) contrast(${1 / Math.E ** amount});
 `;
 
-const color = (type: string) => `
+const color = (type: string = '') => `
   filter: url('color-filters.svg#${type}');
 `;
 
-const obstruction = (type: string, severity: number) => `
+const obstruction = (type: string = '', severity: number = 0) => `
   position: relative;
+
   ::after {
     content: '';
     position: absolute;
@@ -37,32 +39,30 @@ const obstruction = (type: string, severity: number) => `
     height: 100%;
   }
 
-  ${type === 'central' ? `
+  ${type === 'central' && `
     ::after {
       background: radial-gradient(${severity}px circle, rgba(190,190,190,1) 0%, rgba(255,255,255,0) 100%);
     }
-    ` : ''
-  }
+    `
+}
 
   ${type === 'peripheral'
-    ? `::after {
+  && `::after {
       box-shadow: inset black 0 0 ${severity > 0 ? '50' : '0'}px ${severity}px;
     }`
-    : ''
-  }
+}
 
   ${type === 'spots'
-    ? `::after {
+    && `::after {
       background: url('obstruction-spots.svg');
       background-size: cover;
       opacity: ${severity / 60};
       filter: blur(2px) contrast(${severity / 60 + 0.5});
     }`
-    : ''
-  }
+}
 `;
 
-const createStyles = (type: string, state) => {
+const createStyles = (type: string, state: PlaygroundState) => {
   switch (type) {
     case 'blur':
       return blur(state.blurriness);
@@ -82,7 +82,7 @@ const createStyles = (type: string, state) => {
 };
 
 const Overlay = ({ type, children }: OverlayProps) => {
-  const { state } = useContext(playgroundContext);
+  const { state } = useContext(PlaygroundContext);
   const styles = createStyles(type, state);
 
   return <StyledOverlay css={styles}>{children}</StyledOverlay>;

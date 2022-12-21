@@ -1,11 +1,12 @@
 import { useContext } from 'react';
 import ControlWrapper from './ControlWrapper';
 import PlaygroundContext from '../PlaygroundContext';
+import PlaygroundState from '../PlaygroundState';
 
 type SelectControlProps = {
-  id: string;
+  id: keyof PlaygroundState;
   label: string;
-  options: Array<any>;
+  options: Array<{ label: string; value: string }>;
 };
 
 const SelectControl = ({ id, label, options }: SelectControlProps) => {
@@ -21,7 +22,7 @@ const SelectControl = ({ id, label, options }: SelectControlProps) => {
         name={inputName}
         value={state[id]}
         onChange={(e) => {
-          setState((s) => ({ ...s, [id]: e.target.value }));
+          setState((s: PlaygroundState) => ({ ...s, [id]: e.target.value }));
         }}
       >
         {options.map((option) => (

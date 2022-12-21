@@ -2,11 +2,12 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 import ControlWrapper from './ControlWrapper';
 import PlaygroundContext from '../PlaygroundContext';
+import PlaygroundState from '../PlaygroundState';
 
 type RadioControlProps = {
-  id: string;
+  id: keyof PlaygroundState;
   label: string;
-  options: Array<any>;
+  options: Array<{ label: string, value: string | number }>;
 };
 
 const Options = styled.fieldset`
@@ -33,7 +34,7 @@ const RadioControl = ({ id, label, options }: RadioControlProps) => {
               name={inputName}
               value={option.value}
               onChange={() => {
-                setState((s) => ({ ...s, [id]: option.value }));
+                setState((s: PlaygroundState) => ({ ...s, [id]: option.value }));
               }}
             />
             {option.label}
