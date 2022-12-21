@@ -1,0 +1,41 @@
+'Accessibility design mode' be off by default (and should be clearly toggleable to on)
+
+Visual impairment
+  Blurriness / cloudy vision
+  Color blindness / contrast sensitivity
+  Central field loss / tunnel vision (vision loss)
+  -> Able to increase text size and maintain readability of text
+  -> Able to see elements with sufficient contrast
+  -> Accessible videos - audio alternative, subtitles
+  ->  Avoid italicised or decorative font styles for blocks of text or signs
+
+Blindness
+  Complete vision loss - screen reader and keyboard needed for navigation
+  -> Text alternatives for images
+  -> Short text alternatives for non-text content (charts, graphs)
+  -> Accessible form controls and labels
+  -> Decorative images having no alt text
+  -> Accessible videos - closed captioning
+  -> Semantic HTML
+  -> No images of text
+  -> No keyboard traps
+  -> Visible focus / sensible focus order
+
+Motor impairment
+  -> Time-sensitive functionality
+  -> Shifting page elements
+  -> Tap/click target size
+
+Cognitive impairment
+  -> Language complexity, abbreviations, unusual words
+  -> Input errors on forms
+  -> Background audio
+  -> Pausing animations / able to opt out of animations
+  -> Consistent navigation
+  -> No excessive distractions from main content
+  -> Page structure - headings in size order, consistency of colors and fonts
+
+
+Playground should support:
+* Discrete options (checkbox)
+* Sliding scale
