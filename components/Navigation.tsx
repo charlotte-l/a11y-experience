@@ -2,13 +2,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import settings from '../settings';
+import navLinks from '../settings/navigation';
 import Container from './Container';
-
-const navLinks = [
-  { title: 'Visual', path: '/visual-impairment' },
-  { title: 'Cognitive', path: '/cognitive-impairment' },
-  { title: 'Motor', path: '/motor-impairment' },
-];
 
 const NavBar = styled.ul`
   display: flex;
@@ -37,7 +32,7 @@ const Navigation = () => {
           >
             <Link href="/">{settings?.meta?.siteName}</Link>
           </li>
-          {navLinks.map((link) => {
+          {navLinks?.map((link) => {
             const isActive = link.path === router.pathname;
 
             return (
@@ -47,7 +42,7 @@ const Navigation = () => {
                   className={`nav-link ${isActive ? 'active' : ''}`}
                   aria-current={isActive ? 'true' : 'false'}
                 >
-                  {link.title}
+                  {link.navTitle}
                 </Link>
               </li>
             );
