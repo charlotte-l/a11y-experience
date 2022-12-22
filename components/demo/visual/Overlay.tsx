@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import PlaygroundContext from '../PlaygroundContext';
-import PlaygroundState from '../PlaygroundState';
+import PlaygroundContext from '../../PlaygroundContext';
+import PlaygroundState from '../../PlaygroundState';
 
 type OverlayProps = {
   type: string;

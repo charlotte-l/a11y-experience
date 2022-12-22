@@ -4,10 +4,10 @@ import Container from './Container';
 type PageHeaderProps = {
   id: string;
   title: string;
-  description: string;
+  children?: React.ReactNode;
 };
 
-const PageHeader = ({ id, title, description }: PageHeaderProps) => (
+const PageHeader = ({ id, title, children }: PageHeaderProps) => (
   <header aria-labelledby={id}>
     <Container
       css={`
@@ -15,7 +15,7 @@ const PageHeader = ({ id, title, description }: PageHeaderProps) => (
       `}
     >
       <h1 id={id}>{title}</h1>
-      <p>{description}</p>
+      {children}
     </Container>
   </header>
 );

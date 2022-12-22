@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import TextContent from './TextContent';
-import Playground from '../Playground';
+import TextContent from '../TextContent';
+import Playground from '../../Playground';
 import Overlay from './Overlay';
-import SliderControl from '../controls/SliderControl';
-import RadioControl from '../controls/RadioControl';
+import SliderControl from '../../controls/SliderControl';
+import RadioControl from '../../controls/RadioControl';
 
 const Cloudy = () => (
   <Playground

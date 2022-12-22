@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import TextContent from './TextContent';
-import Playground from '../Playground';
+import TextContent from '../TextContent';
+import Playground from '../../Playground';
 import Overlay from './Overlay';
-import SelectControl from '../controls/SelectControl';
+import SelectControl from '../../controls/SelectControl';
 
 const ColorBlind = () => (
   <Playground

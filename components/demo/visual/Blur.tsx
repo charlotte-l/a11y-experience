@@ -1,6 +1,6 @@
-import RadioControl from '../controls/RadioControl';
-import TextContent from './TextContent';
-import Playground from '../Playground';
+import RadioControl from '../../controls/RadioControl';
+import TextContent from '../TextContent';
+import Playground from '../../Playground';
 import Overlay from './Overlay';
 
 const Blur = () => (
