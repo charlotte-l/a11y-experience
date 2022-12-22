@@ -1,5 +1,7 @@
+// TODO: Fix this to use generics passed in by each demo component
+
 type PlaygroundState = {
-  id: string;
+  id?: string;
   blurriness?: number;
   textSize?: number;
   cloudiness?: number;

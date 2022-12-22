@@ -1,11 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import styled from 'styled-components';
 import PlaygroundContext from './PlaygroundContext';
+import PlaygroundState from './PlaygroundState';
 
 type PlaygroundProps = {
   id: string;
-  initialValues: any;
-  controls?: Array<any>;
+  initialValues: PlaygroundState;
+  controls?: Array<React.ReactNode>;
   children?: React.ReactNode;
 };
 
