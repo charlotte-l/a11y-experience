@@ -12,9 +12,12 @@ export default function Home() {
             text-align: center;
           `}
         >
-          <h1>Inclusive design changes lives</h1>
-          <p>The human experience is diverse; accessibility is for everyone.</p>
-          <Link href="/visual-impairment">Start exploring</Link>
+          <h1>Web accessibility changes lives</h1>
+          <p>
+            The human experience is diverse; accessibility is for all.<br/>The Web
+            is &ndash; and always was &ndash; designed for <strong>everyone</strong>.
+          </p>
+          <Link href="/intro">Start exploring</Link>
         </Container>
       </Layout>
     </>
