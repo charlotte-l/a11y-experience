@@ -11,15 +11,23 @@ const Footer = () => (
           justify-content: space-between;
           align-items: center;
           min-height: var(--footer-height);
+          border-top: 1px solid var(--link-text);
+          margin-top: 2rem;
         `}
       >
-        <Link href="/about">About this site</Link>
         <Link
-          href="https://github.com/charlotte-l"
+          href="https://www.linkedin.com/in/charlotte-cameron-dev/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @charlotte-l
+          Created by Charlotte
+        </Link>
+        <Link
+          href="https://github.com/charlotte-l/a11y-experience/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on GitHub
         </Link>
       </div>
     </Container>
