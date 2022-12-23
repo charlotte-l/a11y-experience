@@ -28,13 +28,14 @@ const FooterIcons = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  margin-left: auto;
 `;
 
-const Footer = () => (
+const Footer = ({ showToTop }: { showToTop: boolean }) => (
   <footer>
     <Container>
       <FooterRow>
-        <Link href="#"><span aria-hidden="true">&uarr;</span> Back to top</Link>
+        {showToTop && <Link href="#"><span aria-hidden="true">&uarr;</span> Back to top</Link>}
         <FooterIcons>
           <Link
             href="https://www.linkedin.com/in/charlotte-cameron-dev/"

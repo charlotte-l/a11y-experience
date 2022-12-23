@@ -5,7 +5,7 @@ import Container from '../components/Container';
 export default function Home() {
   return (
     <>
-      <Layout>
+      <Layout showToTop={false}>
         <Container
           cover
           css={`

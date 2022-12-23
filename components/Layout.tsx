@@ -5,17 +5,18 @@ import Navigation from './Navigation';
 
 type Props = {
   showChapters?: boolean,
+  showToTop?: boolean,
   children: React.ReactNode;
 };
 
-const Layout = ({ showChapters, children }: Props) => (
+const Layout = ({ showChapters, showToTop = true, children }: Props) => (
   <>
     <Navigation />
     <main>
       {children}
       {showChapters && <ChapterLinks />}
     </main>
-    <Footer />
+    <Footer showToTop={showToTop} />
   </>
 );
 
