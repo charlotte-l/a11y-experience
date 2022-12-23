@@ -1,6 +1,7 @@
 :root {
   --max-width: 768px;
   --nav-height: 4rem;
+  --header-margin: 4rem;
   --footer-height: 4rem;
   --footer-margin: 4rem;
 

@@ -8,12 +8,13 @@ type PageHeaderProps = {
 };
 
 const PageHeader = ({ id, title, children }: PageHeaderProps) => (
-  <header aria-labelledby={id}>
-    <Container
-      css={`
-        padding-top: 5rem;
-      `}
-    >
+  <header
+    aria-labelledby={id}
+    css={`
+      margin-top: var(--header-margin);
+    `}
+  >
+    <Container>
       <h1 id={id}>{title}</h1>
       {children}
     </Container>
