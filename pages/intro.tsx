@@ -14,12 +14,15 @@ export default function Intro() {
             start of the design process throughout the end of development, we
             can ensure that people have the same <em>access to</em> and{' '}
             <em>experience on</em> the Web, irrespective of if they have a
-            disability or not.
+            disability or other limitations, or not.
           </p>
         </PageHeader>
         <PageSection id="what-is-web-accessibility" title="What is Web Accessibility?">
           <p>
-            Text text text
+            Web accessibility is ensuring there are no barriers between people and their access
+            to and usage of the web. This includes physical disabilities, situational limitations,
+            and things like internet speed or data allowance. Designing and developing for Web
+            accessibility means more people have equal access to the Web.
           </p>
           <p>
             Accessible design and development practices help a whole spectrum of
@@ -33,7 +36,7 @@ export default function Intro() {
               vision loss.
             </li>
             <li>
-              Temporary limitations: limitations which are brought about by
+              Temporary limitations: limitations which are caused by
               injury or illness, e.g. a person using the Web with one hand due
               to a broken arm.
             </li>
@@ -41,6 +44,11 @@ export default function Intro() {
               Situational limitations: limitations which are caused by a
               person&apos;s environment, e.g. a person using the Web on a mobile
               device with a small screen in direct bright light.
+            </li>
+            <li>
+              Socio-economic limitations: limitations which are caused by having reduced economic
+              access to resources and social position in relation to others than others in the
+              same society.
             </li>
           </ul>
         </PageSection>
