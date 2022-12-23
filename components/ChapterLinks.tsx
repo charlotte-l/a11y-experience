@@ -45,12 +45,12 @@ const ChapterLinks = (): React.ReactElement | null => {
     <ChaptersWrapper>
       {hasPrev && (
         <PrevLink href={{ pathname: prev?.path }}>
-          &laquo; {prev?.chapterTitle}
+          &lsaquo; {prev?.chapterTitle}
         </PrevLink>
       )}
       {hasNext && (
         <NextLink href={{ pathname: next?.path }}>
-          {next?.chapterTitle} &raquo;
+          {next?.chapterTitle} &rsaquo;
         </NextLink>
       )}
     </ChaptersWrapper>
