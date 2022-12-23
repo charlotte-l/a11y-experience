@@ -9,7 +9,7 @@ const coverMixin = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+  min-height: calc(100vh - var(--nav-height) - var(--footer-height) - var(--footer-margin));
 `;
 
 const Container = styled.div<Props>`

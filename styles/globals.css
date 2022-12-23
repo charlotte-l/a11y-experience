@@ -2,6 +2,7 @@
   --max-width: 768px;
   --nav-height: 4rem;
   --footer-height: 4rem;
+  --footer-margin: 4rem;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -15,6 +16,7 @@
   --body-bg: #fdfdfe;
   --body-text: #333333;
   --link-bg: #ceffda;
+  --link-bg--dark: #034933;
   --link-text: #057c57;
   --playground-bg: #ffffff;
 
