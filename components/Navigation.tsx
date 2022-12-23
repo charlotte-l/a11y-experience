@@ -21,7 +21,7 @@ const Navigation = () => {
   const router = useRouter();
 
   return (
-    <nav>
+    <nav className='site-nav'>
       <Container>
         <NavBar className="navbar-nav">
           <li

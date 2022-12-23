@@ -12,7 +12,9 @@ const coverMixin = css`
   min-height: calc(100vh - var(--nav-height) - var(--footer-height) - var(--footer-margin));
 `;
 
-const Container = styled.div<Props>`
+const Container = styled.div.attrs({
+  className: 'container',
+})<Props>`
   max-width: min(var(--max-width), 100%);
   margin: 0 auto;
   padding: 0 1.75rem;

@@ -12,7 +12,7 @@ type Props = {
 const Layout = ({ showChapters, showToTop = true, children }: Props) => (
   <>
     <Navigation />
-    <main>
+    <main id='main'>
       {children}
       {showChapters && <ChapterLinks />}
     </main>

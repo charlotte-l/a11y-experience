@@ -32,7 +32,7 @@ const FooterIcons = styled.div`
 `;
 
 const Footer = ({ showToTop }: { showToTop: boolean }) => (
-  <footer>
+  <footer className='site-footer'>
     <Container>
       <FooterRow>
         {showToTop && <Link href="#"><span aria-hidden="true">&uarr;</span> Back to top</Link>}
