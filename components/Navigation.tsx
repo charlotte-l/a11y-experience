@@ -15,6 +15,35 @@ const NavBar = styled.ul`
   margin: 0 auto;
   padding: 0;
   list-style: none;
+
+  li {
+    margin-bottom: 0;
+  }
+`;
+
+const SkipLink = styled(Link)`
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  &:focus-visible {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    width: auto;
+    outline: none;
+    position: absolute;
+    top: 1.25rem;
+    left: 2rem;
+    z-index: 10;
+  }
 `;
 
 const Navigation = () => {
@@ -23,6 +52,7 @@ const Navigation = () => {
   return (
     <nav className='site-nav'>
       <Container>
+        <SkipLink className="skip-link" href='#main'>Skip to content</SkipLink>
         <NavBar className="navbar-nav">
           <li
             className="nav-item nav-brand"
