@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import TextContent from '../TextContent';
-import Playground from '../../Playground';
-import Overlay from './Overlay';
-import SliderControl from '../../controls/SliderControl';
-import RadioControl from '../../controls/RadioControl';
+import TextContent from '../../TextWrapper';
+import Playground from '../../../Playground';
+import Overlay from '../Overlay';
+import SliderControl from '../../../controls/SliderControl';
+import RadioControl from '../../../controls/RadioControl';
 
 const Cloudy = () => (
   <Playground
@@ -35,7 +35,9 @@ const Cloudy = () => (
     ]}
   >
     <Overlay type="cloudy">
-      <TextContent />
+      <TextContent>
+        A test span might go here
+      </TextContent>
       <div>
         <Image alt="" src="/benny-and-godzilla.jpg" width="200" height="200" />
       </div>

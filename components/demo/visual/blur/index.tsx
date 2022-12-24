@@ -1,7 +1,7 @@
-import RadioControl from '../../controls/RadioControl';
-import TextContent from '../TextContent';
-import Playground from '../../Playground';
-import Overlay from './Overlay';
+import RadioControl from '../../../controls/RadioControl';
+import TextContent from '../../TextWrapper';
+import Playground from '../../../Playground';
+import Overlay from '../Overlay';
 
 const Blur = () => (
   <Playground
@@ -36,7 +36,9 @@ const Blur = () => (
     ]}
   >
     <Overlay type="blur">
-      <TextContent />
+      <TextContent>
+        A test span would go here
+      </TextContent>
     </Overlay>
   </Playground>
 );

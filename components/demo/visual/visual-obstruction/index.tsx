@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Playground from '../../Playground';
-import Overlay from './Overlay';
-import RadioControl from '../../controls/RadioControl';
-import SliderControl from '../../controls/SliderControl';
+import Playground from '../../../Playground';
+import Overlay from '../Overlay';
+import RadioControl from '../../../controls/RadioControl';
+import SliderControl from '../../../controls/SliderControl';
 
 const Obstruction = () => (
   <Playground
