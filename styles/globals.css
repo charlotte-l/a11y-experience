@@ -5,6 +5,8 @@
   --footer-height: 4rem;
   --footer-margin: 4rem;
 
+  --section-padding: 2rem 0;
+
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
@@ -66,6 +68,10 @@ img, picture, video, canvas, svg {
 
 input, button, textarea, select {
   font: inherit;
+}
+
+input, progress {
+  accent-color: var(--link-text);
 }
 
 p, h1, h2, h3, h4, h5, h6 {

@@ -11,7 +11,7 @@ const PageSection = ({ id, title, children }: PageSectionProps) => (
   <section
     aria-labelledby={id}
     css={`
-      padding: 2rem 0;
+      padding: var(--section-padding);
     `}
   >
     <Container>

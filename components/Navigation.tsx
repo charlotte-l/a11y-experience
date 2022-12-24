@@ -16,7 +16,7 @@ const NavBar = styled.ul`
   padding: 0;
   list-style: none;
 
-  li {
+  & > li {
     margin-bottom: 0;
   }
 `;
