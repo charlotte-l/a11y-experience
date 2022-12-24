@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PlaygroundContext from '../../PlaygroundContext';
 import PlaygroundState from '../../PlaygroundState';
 
@@ -25,42 +25,54 @@ const color = (type: string = '') => `
   filter: url('color-filters.svg#${type}');
 `;
 
-const obstruction = (type: string = '', severity: number = 0) => `
-  position: relative;
+const obstruction = (type: string = '', severity: number = 0) => {
+  const baseStyles = `
+    position: relative;
 
-  ::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  ${type === 'central' && `
     ::after {
-      background: radial-gradient(${severity}px circle, rgba(190,190,190,1) 0%, rgba(255,255,255,0) 100%);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
-    `
-}
+  `;
 
-  ${type === 'peripheral'
-  && `::after {
-      box-shadow: inset black 0 0 ${severity > 0 ? '50' : '0'}px ${severity}px;
-    }`
-}
+  switch (type) {
+    case 'central':
+      return `
+        ${baseStyles}
 
-  ${type === 'spots'
-    && `::after {
-      background: url('obstruction-spots.svg');
-      background-size: cover;
-      opacity: ${severity / 60};
-      filter: blur(2px) contrast(${severity / 60 + 0.5});
-    }`
-}
-`;
+        ::after {
+          background: radial-gradient(${severity}px circle, rgba(190,190,190,1) 0%, rgba(255,255,255,0) 100%);
+        }
+      `;
+    case 'peripheral':
+      return `
+        ${baseStyles}
+
+        ::after {
+          box-shadow: inset black 0 0 ${severity > 0 ? '50' : '0'}px ${severity}px;
+        }
+      `;
+    case 'spots':
+      return `
+        ${baseStyles}
+
+        ::after {
+          background: url('obstruction-spots.svg');
+          background-size: cover;
+          opacity: ${severity / 60};
+          filter: blur(2px) contrast(${severity / 60 + 0.5});
+        }
+      `;
+    default:
+      return '';
+  }
+};
 
 const createStyles = (type: string, state: PlaygroundState) => {
   switch (type) {
