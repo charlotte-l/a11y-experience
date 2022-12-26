@@ -14,7 +14,11 @@ const PlaygroundWrapper = styled.div`
   background-color: var(--playground-bg);
   border: 1px solid var(--link-text);
   border-radius: var(--border-radius);
-  padding: 0.5rem;
+`;
+
+const ControlsWrapper = styled.div`
+  border-bottom: 1px solid var(--link-text);
+  margin-bottom: 0.5rem;
 `;
 
 const Playground = ({
@@ -37,8 +41,10 @@ const Playground = ({
   return (
     <PlaygroundContext.Provider value={contextValue}>
       <PlaygroundWrapper>
+        <ControlsWrapper>
+          {controls}
+        </ControlsWrapper>
         {children}
-        {controls}
       </PlaygroundWrapper>
     </PlaygroundContext.Provider>
   );

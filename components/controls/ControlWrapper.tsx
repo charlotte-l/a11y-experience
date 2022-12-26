@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+  margin: 1rem;
 `;
 
 const ControlWrapper = ({ children }: ControlWrapperProps) => <Wrapper>{children}</Wrapper>;
