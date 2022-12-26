@@ -6,6 +6,7 @@ import Success from '../icons/Success';
 type AlertProps = {
   $level: 'success' | 'warning' | 'error';
   message: string;
+  noIcon?: boolean;
 };
 
 const alertIcons = {
@@ -20,6 +21,7 @@ const AlertDiv = styled.div<{ $level: string }>`
   align-items: center;
   gap: 0.375em;
   padding: 0.25rem 0.5rem;
+  margin: 1.5rem 0;
 
   ${(props) => {
     switch (props.$level) {
@@ -47,9 +49,9 @@ const AlertDiv = styled.div<{ $level: string }>`
   }}
 `;
 
-const Alert = ({ $level, message }: AlertProps) => (
+const Alert = ({ $level, message, noIcon }: AlertProps) => (
   <AlertDiv className="alert" $level={$level}>
-    {alertIcons[$level]}
+    {!noIcon && alertIcons[$level]}
     {message}
   </AlertDiv>
 );
