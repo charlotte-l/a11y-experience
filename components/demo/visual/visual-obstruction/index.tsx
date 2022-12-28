@@ -164,7 +164,7 @@ const Obstruction = () => {
               </button>
               {showSearch && (
                 <SearchBarWrapper>
-                  <input type="search" placeholder="Search..." autoFocus />
+                  <input type="search" placeholder="Search..." autoFocus={true} />
                 </SearchBarWrapper>
               )}
             </DemoHeader>
