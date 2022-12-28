@@ -1,6 +1,5 @@
 import Blindness from '../components/demo/visual/blind';
 import Blur from '../components/demo/visual/blur';
-import Cloudy from '../components/demo/visual/cloudy';
 import ColorBlind from '../components/demo/visual/color-blind';
 import Obstruction from '../components/demo/visual/visual-obstruction';
 import Layout from '../components/Layout';
@@ -38,23 +37,6 @@ export default function VisualDisability() {
           </p>
 
           <Blur />
-        </PageSection>
-
-        <PageSection
-          id="visual-disability--cloudiness-header"
-          title="Cloudiness"
-        >
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus
-            augue, aliquet nec dolor in, aliquam rhoncus augue. Etiam
-            consectetur, ante eu gravida faucibus, leo leo gravida nibh, id
-            convallis tellus felis sit amet lorem. Quisque feugiat nec mauris
-            quis euismod. In volutpat hendrerit augue, vel cursus justo faucibus
-            ac. Nunc dolor leo, malesuada in accumsan commodo, facilisis ut
-            justo.
-          </p>
-
-          <Cloudy />
         </PageSection>
 
         <PageSection
