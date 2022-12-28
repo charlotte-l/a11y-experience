@@ -15,7 +15,6 @@
     "@types/react-dom": "18.0.9",
     "eslint": "8.30.0",
     "eslint-config-next": "13.0.7",
-    "lodash.debounce": "^4.0.8",
     "next": "13.0.7",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
@@ -24,7 +23,6 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "@types/lodash.debounce": "^4.0.7",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint-config-airbnb-base": "^15.0.0",

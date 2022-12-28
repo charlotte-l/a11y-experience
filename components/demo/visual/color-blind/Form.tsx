@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import debounce from 'lodash.debounce';
 import { ChangeEvent, useState } from 'react';
 
 const StyledInput = styled.div`
@@ -50,7 +49,7 @@ const Form = () => {
             aria-required="true"
             defaultValue="invalid-email.com"
             aria-invalid={!inputIsValid}
-            onChange={debounce(setFieldValidity, 100)}
+            onBlur={setFieldValidity}
           />
         </label>
         <button type="submit">Subscribe</button>
