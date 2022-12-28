@@ -17,17 +17,19 @@ const blur = (amount: number = 0) => `
   filter: blur(${amount}px);
 `;
 
-const cloudy = (amount: number = 0) => `
-  filter: blur(${amount * 1.5}px) contrast(${1 / Math.E ** amount});
-`;
-
 const color = (type: string = '') => `
   filter: url('color-filters.svg#${type}');
 `;
 
-const obstruction = (type: string = '', severity: number = 0) => {
+const obstruction = (type: string = '', severity: number = 0, zoom: number = 1) => {
   const baseStyles = `
     position: relative;
+    
+    > * > * {
+      overflow: auto;
+      transform: scale(${zoom});
+      transform-origin: 0 0;
+    }
 
     ::after {
       content: '';
@@ -38,16 +40,25 @@ const obstruction = (type: string = '', severity: number = 0) => {
       right: 0;
       width: 100%;
       height: 100%;
+      pointer-events: none;
     }
   `;
 
   switch (type) {
+    case 'cloudy':
+      return `
+        > * > * {
+          filter: blur(${severity / 60}px) contrast(${1 / Math.E ** (severity / 60)});
+          transform: scale(${zoom});
+          transform-origin: 0 0;
+        }
+      `;
     case 'central':
       return `
         ${baseStyles}
 
         ::after {
-          background: radial-gradient(${severity}px circle, rgba(190,190,190,1) 0%, rgba(255,255,255,0) 100%);
+          background: radial-gradient(${severity * 1.5}px circle, rgba(190,190,190,1) 80%, rgba(255,255,255,0) 100%);
         }
       `;
     case 'peripheral':
@@ -55,7 +66,7 @@ const obstruction = (type: string = '', severity: number = 0) => {
         ${baseStyles}
 
         ::after {
-          box-shadow: inset black 0 0 ${severity > 0 ? '50' : '0'}px ${severity}px;
+          background: radial-gradient(circle at center, transparent ${100 - (severity / 2)}%, black ${100 - (severity / 2.5)}%);
         }
       `;
     case 'spots':
@@ -79,14 +90,11 @@ const createStyles = (type: string, state: PlaygroundState) => {
     case 'blur':
       return blur(state.blurriness);
 
-    case 'cloudy':
-      return cloudy(state.cloudiness);
-
     case 'color':
       return color(state['color-deficiency']);
 
     case 'obstruction':
-      return obstruction(state.obstruction, state.severity);
+      return obstruction(state.obstruction, state.severity, state.zoom);
 
     default:
       return '';
@@ -97,7 +105,11 @@ const Overlay = ({ type, children }: OverlayProps) => {
   const { state } = useContext(PlaygroundContext);
   const styles = createStyles(type, state);
 
-  return <StyledOverlay css={styles}>{children}</StyledOverlay>;
+  return (
+    <StyledOverlay className='overlay' css={styles}>
+      {children}
+    </StyledOverlay>
+  );
 };
 
 export default Overlay;

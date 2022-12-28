@@ -4,7 +4,7 @@ type PlaygroundState = {
   id?: string;
   blurriness?: number;
   textSize?: number;
-  cloudiness?: number;
+  zoom?: number;
   'color-deficiency'?: string;
   obstruction?: string;
   severity?: number;

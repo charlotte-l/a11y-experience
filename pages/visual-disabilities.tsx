@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Blindness from '../components/demo/visual/blind';
 import Blur from '../components/demo/visual/blur';
 import ColorBlind from '../components/demo/visual/color-blind';
@@ -90,6 +91,7 @@ export default function VisualDisability() {
             <li>Use iconography and descriptive labels to convey intent</li>
             <li>Use texture and patterns as well as color to convey information</li>
           </ul>
+
           <p>
             In the demo below, you can see how different types of color blindness can affect a
             person&apos;s access to information on the Web. Notice how certain design patterns
@@ -104,13 +106,93 @@ export default function VisualDisability() {
           title="Visual Field Obstructions"
         >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus
-            augue, aliquet nec dolor in, aliquam rhoncus augue. Etiam
-            consectetur, ante eu gravida faucibus, leo leo gravida nibh, id
-            convallis tellus felis sit amet lorem. Quisque feugiat nec mauris
-            quis euismod. In volutpat hendrerit augue, vel cursus justo faucibus
-            ac. Nunc dolor leo, malesuada in accumsan commodo, facilisis ut
-            justo.
+            The area from which a person&apos;s eye is able to gather visual information when
+            looking at a single point is referred to as the field of vision or visual field. Some
+            people have a smaller field of vision. This is called visual field loss, or visual
+            field obstruction. Visual field obstruction often also causes blurred vision.
+          </p>
+          <p>
+            A person can have visual field loss from birth, but more commonly, it is caused by
+            a medical condition which affects the retina or optic nerve. Some types of visual
+            field loss can be temporary; for example, due to a migraine. Visual field loss can
+            be grouped into the following types:
+          </p>
+          <ul>
+            <li>
+              Central field loss: vision is reduced or absent in the middle of a
+              person&apos;s vision. Macular degeneration is a common cause of this
+              type of vision loss
+            </li>
+            <li>
+              Peripheral field loss: only seeing in the central portion of one&apos;s visual field;
+              having &ldquo;tunnel vision&rdquo;. Glaucoma is a common cause of this
+              type of vision loss
+            </li>
+            <li>
+              Spotted vision: scattered patches of obscured vision. Diabetic retinopathy is a common
+              cause of this type of vision loss
+            </li>
+            <li>
+              Reduced contrast sensitivity: reduced sensitivity between variations of lightness and
+              darkness. Cataracts are a common cause of this type of vision loss
+            </li>
+          </ul>
+          <p>
+            Any type of visual field loss can make it more difficult to read text on a Webpage,
+            navigate through a Website, or focus on a specific part of a page. Small text,
+            low-contrast text or images, and poor clarity of layout can make content less accessible
+            to people with visual field obstructions.
+          </p>
+          <p>
+            Some people may prefer to browse the Web with assistive technologies like screen
+            readers. Others magnify their screens to read content, and others change their
+            monitor settings to reduce the brightness or increase the contrast. It&apos;s important
+            to ensure that people who browse the Web in these ways are able to fully access
+            the information and functionality of your site.
+          </p>
+          <p>
+            As many as 11 million people in the United States have some form of macular
+            degeneration. 4% of the global population (around 246 million people) have
+            some form of low vision. Visual field loss occurs in approximately 30-35%
+            of stroke survivors.
+          </p>
+
+          <h3>Designing for visual field obstructions</h3>
+
+          <p></p>
+          <ul>
+            <li>
+              Use a <Link href="https://webaim.org/resources/contrastchecker/" target='_blank'>color contrast checker</Link> to ensure text elements have sufficient
+              contrast against background colors and images
+            </li>
+            <li>
+              For gradient backgrounds, verify that the text-background color contrast ratio passes
+              for both the lightest and darkest parts of the gradient
+            </li>
+            <li>
+              Add support for <code>prefers-color-scheme: dark</code>, and/or an on-page toggle to
+              switch to a dark theme. Test your site in the OS-based high-contrast mode
+            </li>
+            <li>
+              Make sure users can zoom in or re-scale your content (up to 200%). Ensure text shifts
+              to fit the page, and doesn&apos;t overflow horizontally when enlarged
+            </li>
+            <li>
+              Keep information - text, controls, feedback, popups, etc. - in close proximity
+            </li>
+            <li>
+              Maintain a logical layout which is still perceivable with
+              visual field obstructions
+            </li>
+            <li>
+              Inform users of new information that may be outside of their view &ndash; for
+              example, a new browser tab opening in the background
+            </li>
+          </ul>
+
+          <p>
+            In the demo below, you can see how different types of visual field obstruction can
+            affect the way a person accesses and engages with the Web.
           </p>
 
           <Obstruction />
