@@ -158,7 +158,8 @@ p:has(+ ul) {
 
 a {
   color: var(--link-text);
-  transition: all 0.2s ease;
+  transition: color 0.2s ease,
+              background 0.2s ease;
 }
 
 a:hover,
