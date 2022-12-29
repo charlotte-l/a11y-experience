@@ -20,7 +20,7 @@ const SelectControl = ({ id, label, options }: SelectControlProps) => {
       <select
         id={id}
         name={inputName}
-        value={state[id]}
+        value={state[id] as string}
         onChange={(e) => {
           setState((s: PlaygroundState) => ({ ...s, [id]: e.target.value }));
         }}

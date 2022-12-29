@@ -28,7 +28,7 @@ const SliderControl = ({
         min={min}
         max={max}
         step={step}
-        value={state[id]}
+        value={state[id] as string}
         onChange={(e) => {
           setState((s: PlaygroundState) => ({ ...s, [id]: e.target.value }));
         }}

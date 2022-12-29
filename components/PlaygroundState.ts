@@ -8,6 +8,7 @@ type PlaygroundState = {
   'color-deficiency'?: string;
   obstruction?: string;
   severity?: number;
+  enabled?: boolean;
 };
 
 export default PlaygroundState;

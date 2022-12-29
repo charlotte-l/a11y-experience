@@ -13,7 +13,7 @@ type RadioControlProps = {
 const Options = styled.fieldset`
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 2rem;
   font-size: 0.875rem;
 `;
 
