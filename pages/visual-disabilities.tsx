@@ -67,7 +67,7 @@ export default function VisualDisability() {
         >
           <p>
             Visual acuity is a measure of how well small details are perceived
-            in the very center of a person&apos; visual field. This can be
+            in the very center of a person&apos;s visual field. This can be
             broken down into <em>far acuity</em> (recognizing details at a far
             distance) and <em>near acuity</em> (recognizing details at a near
             distance). If a person has reduced visual acuity, objects and text
