@@ -15,7 +15,9 @@ const PageSection = ({ id, title, children }: PageSectionProps) => (
     `}
   >
     <Container>
-      <h2 id={id}>{title}</h2>
+      <h2 id={id} css={'scroll-margin-block: var(--section-padding)'}>
+        {title}
+      </h2>
       {children}
     </Container>
   </section>

@@ -6,6 +6,7 @@ import Obstruction from '../components/demo/visual/visual-obstruction';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import PageSection from '../components/PageSection';
+import TableOfContents from '../components/TableOfContents';
 
 export default function VisualDisability() {
   return (
@@ -36,6 +37,28 @@ export default function VisualDisability() {
             </Link>{' '}
             should be the basis of every Website.
           </p>
+
+          <TableOfContents
+            title='Table of Contents:'
+            headings={[
+              {
+                label: 'Reduced Visual Acuity',
+                anchor: 'visual-disability--acuity-header',
+              },
+              {
+                label: 'Color Blindness',
+                anchor: 'visual-disability--color-blindness-header',
+              },
+              {
+                label: 'Visual Field Obstructions',
+                anchor: 'visual-disability--obstructions-header',
+              },
+              {
+                label: 'Blindness (complete vision loss)',
+                anchor: 'visual-disability--blindness-header',
+              },
+            ]}
+          />
         </PageHeader>
 
         <PageSection
@@ -119,6 +142,11 @@ export default function VisualDisability() {
               view once triggered when scrolling or moving the mouse
             </li>
           </ul>
+          <p>
+            In the demo below, you can see how loss of visual acuity can affect
+            a person&apos;s vision, and how a custom stylesheet can help to
+            make Web content more accessible to those with reduced acuity.
+          </p>
 
           <VisualAcuity />
         </PageSection>
