@@ -43,26 +43,26 @@ export default function VisualDisability() {
             headings={[
               {
                 label: 'Reduced Visual Acuity',
-                anchor: 'visual-disability--acuity-header',
+                anchor: 'reduced-visual-acuity',
               },
               {
                 label: 'Color Blindness',
-                anchor: 'visual-disability--color-blindness-header',
+                anchor: 'color-blindness',
               },
               {
                 label: 'Visual Field Obstructions',
-                anchor: 'visual-disability--obstructions-header',
+                anchor: 'visual-field-obstructions',
               },
               {
                 label: 'Blindness (complete vision loss)',
-                anchor: 'visual-disability--blindness-header',
+                anchor: 'blindness',
               },
             ]}
           />
         </PageHeader>
 
         <PageSection
-          id="visual-disability--acuity-header"
+          id="reduced-visual-acuity"
           title="Reduced Visual Acuity"
         >
           <p>
@@ -152,7 +152,7 @@ export default function VisualDisability() {
         </PageSection>
 
         <PageSection
-          id="visual-disability--color-blindness-header"
+          id="color-blindness"
           title="Color Blindness"
         >
           <p>
@@ -223,7 +223,7 @@ export default function VisualDisability() {
         </PageSection>
 
         <PageSection
-          id="visual-disability--obstructions-header"
+          id="visual-field-obstructions"
           title="Visual Field Obstructions"
         >
           <p>
@@ -330,7 +330,7 @@ export default function VisualDisability() {
         </PageSection>
 
         <PageSection
-          id="visual-disability--blindness-header"
+          id="blindness"
           title="Blindness (complete vision loss)"
         >
           <p>
