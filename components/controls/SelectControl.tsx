@@ -13,6 +13,7 @@ type SelectControlProps = {
 const StyledLabel = styled.label`
   font-size: 1rem;
   font-weight: bold;
+  min-width: 8rem;
 `;
 
 const SelectControl = ({ id, label, options }: SelectControlProps) => {

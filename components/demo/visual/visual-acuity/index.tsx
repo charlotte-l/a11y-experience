@@ -75,7 +75,7 @@ const VisualAcuity = () => (
       <ToggleControl
         key="enabled"
         id="enabled"
-        label="Enable user stylesheet"
+        label="Enable user styles"
       />,
     ]}
   >

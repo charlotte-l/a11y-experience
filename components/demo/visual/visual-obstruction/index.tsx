@@ -126,10 +126,10 @@ const Obstruction = () => {
           id="textSize"
           label="Font size"
           options={[
-            { label: 'Small (14px)', value: 14 },
-            { label: 'Medium (16px)', value: 16 },
-            { label: 'Large (24px)', value: 24 },
-            { label: 'XLarge (32px)', value: 32 },
+            { label: '14px', value: 14 },
+            { label: '16px', value: 16 },
+            { label: '24px', value: 24 },
+            { label: '32px', value: 32 },
           ]}
         />,
         <RadioControl

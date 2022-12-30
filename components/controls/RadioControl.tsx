@@ -23,6 +23,7 @@ const Options = styled.fieldset`
     padding: 0;
     float: left;
     flex-shrink: 0;
+    min-width: 8rem;
   }
 
   & > label {
