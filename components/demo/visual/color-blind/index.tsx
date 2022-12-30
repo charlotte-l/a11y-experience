@@ -11,6 +11,12 @@ import stations from './tubeStationData';
 import Container from '../../../Container';
 import Form from './Form';
 
+const StyledContainer = styled(Container)`
+  padding: 1rem 1rem 3rem;
+  max-height: 400px;
+  overflow: auto;
+`;
+
 const FormHeading = styled.span`
   display: block;
   margin-top: 3rem;
@@ -46,7 +52,7 @@ const ColorBlind = () => (
       />,
     ]}
   >
-    <Container css={'padding: 1rem 1rem 3rem'}>
+    <StyledContainer>
       <Overlay type="color">
         <TextWrapper>
           <p>
@@ -100,7 +106,7 @@ const ColorBlind = () => (
         <FormHeading>Sign up for status updates</FormHeading>
         <Form />
       </Overlay>
-    </Container>
+    </StyledContainer>
   </Playground>
 );
 
