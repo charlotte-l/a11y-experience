@@ -13,6 +13,15 @@ export default function VisualDisability() {
       <Layout showChapters>
         <PageHeader id="visual-disability--header" title="Visual Disabilities">
           <p>
+            Visual disability or limitation is a broad term which encompasses multiple
+            categories of visual impairments. Having a visual disability or limitation
+            can mean having no vision at all (blindness), having a reduced field of vision,
+            having blurred vision or loss of contrast, or being unable to perceive certain
+            colors. Some people&apos;s vision is affected by the brightness or type of
+            lighting in the room or outdoors. A person&apos;s level of vision may fluctuate,
+            deteriorate, or remain constant over time and in different conditions.
+          </p>
+          <p>
             People with visual disabilities or limitations may use assistive
             technologies like screen magnification software, screen readers or
             braille displays when browsing the Web. They may also use a keyboard
