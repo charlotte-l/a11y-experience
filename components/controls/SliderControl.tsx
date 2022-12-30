@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import styled from 'styled-components';
 import ControlWrapper from './ControlWrapper';
 import PlaygroundContext from '../PlaygroundContext';
 import PlaygroundState from '../PlaygroundState';
@@ -11,6 +12,11 @@ type SliderControlProps = {
   step?: number;
 };
 
+const StyledLabel = styled.label`
+  font-size: 1rem;
+  font-weight: bold;
+`;
+
 const SliderControl = ({
   id, label, min, max, step,
 }: SliderControlProps) => {
@@ -20,7 +26,7 @@ const SliderControl = ({
 
   return (
     <ControlWrapper>
-      <label htmlFor={id}>{label}</label>
+      <StyledLabel htmlFor={id}>{label}</StyledLabel>
       <input
         type="range"
         id={id}

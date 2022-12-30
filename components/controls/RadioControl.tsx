@@ -14,7 +14,30 @@ const Options = styled.fieldset`
   display: flex;
   align-items: center;
   gap: 2rem;
-  font-size: 0.875rem;
+  border: medium none;
+  padding: 0;
+
+  & > legend {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0;
+    float: left;
+    flex-shrink: 0;
+  }
+
+  & > label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    line-height: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    > input {
+      cursor: pointer;
+    }
+  }
 `;
 
 const RadioControl = ({ id, label, options }: RadioControlProps) => {

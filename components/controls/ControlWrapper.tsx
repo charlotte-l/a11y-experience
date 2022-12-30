@@ -8,7 +8,7 @@ type ControlWrapperProps = {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 2rem;
   margin: 1rem;
 `;
 

@@ -17,14 +17,14 @@ const ToggleButton = styled.button`
   background: none;
   line-height: inherit;
   text-align: left;
-  padding: 0.4rem 3.75rem 0.4rem 0;
+  font-weight: bold;
+  padding: 0.4rem 4.5rem 0.4rem 0;
   min-height: unset;
   border-radius: 0;
   box-shadow: none;
 
   &:focus,
   &:hover {
-    color: var(--link-text);
     outline: none;
     background: none;
   }
