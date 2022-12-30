@@ -14,6 +14,7 @@ const PlaygroundWrapper = styled.div`
   background-color: var(--playground-bg);
   border: 1px solid var(--link-text);
   border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
 `;
 
 const ControlsWrapper = styled.div`

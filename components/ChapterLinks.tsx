@@ -10,6 +10,7 @@ const ChaptersWrapper = styled(Container)`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: var(--section-padding);
 `;
 
 const PrevLink = styled(Link)`
