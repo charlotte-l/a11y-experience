@@ -51,7 +51,7 @@ const ToggleButton = styled.button`
   &::after {
     left: auto;
     right: 1.5rem;
-    top: 0.45rem;
+    top: 0.455rem;
     background-color: #fff;
     background-position: center center;
     border-radius: 50%;
